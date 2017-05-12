@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reprograma - Reprogramando o mundo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+
+	<!-- MENU HORIZONTAL -->
+	<header id="cabecalho"> <!-- ID é usado quando nao for se repetir -->
+		<div class="container linha espacoEntre alinharVertical"> <!-- espaco entre as nav da esquerda e direita -->
+			
+			<button class="botao menuHamburguer"><i class="fa fa-bars"></i>
+			</button>
+
+
+			<nav class="menuHorizontal" id="navegacaoPrimaria">
+				<ul class="linha"><!-- "linha" para alinhar o menu horizontal, fica no pai -->
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">CONTATO</a></li>
+					<li><a href="#">QUEM SOMOS</a></li>
+				</ul>
+			</nav>
+		
+			<nav class="menuHorizontal" id="navegacaoMidiaSociais">
+				<ul class="linha">
+					<li><a href="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+	<!-- FIM MENU HORIZONTAL -->
+
+	<!-- BANNER -->
+	<section id="banner">
+		<div class="container centralizador">
+			<div id="slogan">
+				<h1>Reprograma</h1>
+				<h2>Vamos reprogramar o mundo</h2>
+			</div>
+		</div>	
+	</section>
+	<!-- FIM BANNER -->
+
+	<!-- VALORES -->
+	<main id="valores">
+		<div class="container">
+			
+			<div class="cardContainer linha">
+				<!-- CARDS -->
+				<div class="card">
+					<img src="imgs/foco.svg">
+						<div class="text">
+							<h3>FOCO</h3>
+							<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</P>
+						</div>
+						<div class="botoes linha">
+							<button class="botao detalhe">Detalhe</button>
+							<button class="botao amei"><span>Amei!</span><i class="fa fa-heart"></i></button>
+						</div>
+
+				</div>
+				<div class="card">
+					<img src="imgs/forca.svg">
+						<div class="text">
+							<h3>FORÇA</h3>
+							<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</P>
+						</div>
+						<div class="botoes linha">
+							<button class="botao detalhe">Detalhe</button>
+							<button class="botao amei"><span>Amei!</span><i class="fa fa-heart"></i></button>
+						</div>
+
+				</div>
+				<div class="card">
+					<img src="imgs/fe.svg">
+					<div class="text">
+						<h3>FÉ</h3>
+						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</P>
+					</div>
+					<div class="botoes linha">
+						<button class="botao detalhe">Detalhe</button>
+						<button class="botao amei"><span>Amei!</span><i class="fa fa-heart"></i></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<!-- FIM VALORES -->
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	font-family: "Open sans";
+}
+
+.container{
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.linha{ 
+	display: flex; /*todos que tem classe linha vãi ficar um do lado do outro*/
+}
+
+	.linha.espacoEntre{ /*um elemento que tem espacoEntre e está na linha*/
+		justify-content: space-between;
+	}
+
+	.linha.alinharVertical{
+		align-items: center;
+	}
+
+h1:first-child{ /*first-child é o primeiro filho*/
+	margin: 0;
+}
+
+a{ /*todos os links do site não serão sublinhados*/
+	text-decoration: none;
+}
+
+ul{ /*tirar os bulets do pai das linhas*/
+	list-style-type: none;
+}
+
+*{
+	color: #292929;
+	box-sizing: border-box;
+}
+
+.centralizador{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.botao{
+	background: white;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 7px 13px;
+	border: solid 1px #ccc;
+	border-radius: 16px;
+	margin: 10px;
+	cursor: pointer;
+}
+.botao .fa{
+	margin-left: 5px;
+}
+
+.botao .fa:only-child{ /*icones sozinhos (sem irmão) dentro do botão não precisam de margin*/
+	margin-left: 0px;
+}
+
+.botao.amei{
+	background: #672f82;
+}
+
+.botao.amei span, 
+.botao.amei .fa{
+	color: rgba(255, 255, 255, 0.92);
+}
+
+body section,
+body main{
+	padding-top: 20px;
+}
+
+/*FIM ESTILOS PADROES*/
+
+/*CABECALHO*/
+
+#cabecalho{
+	width: 100%;
+	background-color: #462755;
+	/*torna a tag fixa e o background do cabeçalho*/
+	position: fixed;
+	top: 0px;
+	left:0px; 
+}
+
+#cabecalho a{
+	color: white;
+}
+
+#cabecalho .container{
+	height: 40px;
+}
+
+#cabecalho .fa{
+	color: white;
+}
+
+.menuHorizontal ul{
+	margin: 0;
+	padding: 0;
+}
+
+.menuHorizontal a{
+	padding: 0 10px;
+}
+
+.botao.menuHamburguer{
+	background: none;
+	display: none;
+}
+
+.botao.amei.vermelho{
+	background-color: red;
+}
+
+.botao.detalhe.azul{
+	background-color: blue;	
+	color: white; 
+}
+
+/*FIM CABECALHO*/
+
+/*BANNER*/
+#banner{
+	background-image: url(imgs/banner_background.jpg);
+	background-size: cover;
+	padding-top: 0px;
+
+}
+
+#banner .container{ /*pai 'banner' tem q obedecer o tamanho do filho 'container'*/
+	height: 100vh;
+}
+
+#slogan *{ /*com * qualquer elemento dentro do slogan vai obedecer essas propriedades (só filhos)*/
+	color: white;
+}
+
+#slogan h1{
+	height: 81px;
+	width: 500px;
+	background: url(imgs/logo.png) no-repeat;
+	overflow: hidden; 
+	text-indent: -999999999px;
+}
+
+#slogan h2{
+	text-align: center;
+}
+
+/*FIM BANNER*/
+
+/*VALORES*/
+.card{
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+}
+
+.card .text{
+	text-align: center;
+}
+
+.card img{
+	height: 100px;
+}
+
+/*TABLET*/	
+@media (max-width: 1140px){
+	.container{
+		width: 700px;
+	}
+
+	.botao.menuHamburguer{
+		display: block;
+	}
+
+	.cardContainer{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.card{
+		width: 50%;
+	}
+
+	#cabecalho .container{
+		position: relative;
+	}
+
+	#navegacaoPrimaria{
+		display: none;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width: 100%;
+	}
+
+	#navegacaoPrimaria ul{
+		flex-direction: column;
+	}
+
+	#navegacaoPrimaria a{
+		display: block;
+		padding: 20px 0px;
+		padding-left: 20px;
+		background: white;
+		color: #282828;
+	}
+
+	#navegacaoPrimaria.visivel{
+		display: block;
+	}
+}
+
+/*FIM TABLET*/	
+
+/*SMARTPHONE*/	
+@media (max-width: 700px){
+	.container{
+		width: 100%;
+	}
+
+	#slogan h1{
+		width: 300px;
+		background-size: contain; /*faz com que o tamanho da imagem fique proporcional*/
+		margin:	auto; /*centralizar a imagem*/
+	}
+
+	.cardContainer .card{
+		width: 100%
+	}
+
+}
+
+/*FIM SMARTPHONE*/	
